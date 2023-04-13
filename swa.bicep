@@ -1,13 +1,3 @@
-
-
-Skip to content
-Using Gmail with screen readers
-
-Conversations
-7.23 GB of 15 GB used
-Terms · Privacy · Programme Policies
-Last account activity: 7 minutes ago
-Details
 // ---------------------------------------------------------
 // Parameters
 @description('Required - Name of the static site')
