@@ -32,12 +32,11 @@ param stagingEnvironmentPolicy string = 'Enabled'
 @description('Optional - Status of enterprise grade CDN serving traffic to app.')
 param enterpriseGradeCdnStatus string = 'Disabled'
 
-@description('')
-param appLocation string = ''
+@description('Optional - Build properties for the static site.')
+param buildProperties object = {}
 
-param apiLocation string = ''
-
-param appArtifactLocation string = ''
+@description('Optional - Template Options for the static site.')
+param templateProperties object = {}
 
 @description('Optional - The provider that submitted the last deployment to the primary environment of the static site.')
 param provider string = 'None'
@@ -66,15 +65,12 @@ resource staticSite 'Microsoft.Web/staticSites@2022-03-01' = {
     allowConfigFileUpdates: allowConfigFileUpdates
     stagingEnvironmentPolicy: stagingEnvironmentPolicy
     enterpriseGradeCdnStatus: enterpriseGradeCdnStatus
-    provider: provider
-    branch: branch
-    buildProperties: {
-      appLocation: appLocation
-      apiLocation: apiLocation
-      appArtifactLocation: appArtifactLocation
-    }
-    repositoryToken: repositoryToken
-    repositoryUrl: repositoryUrl
+    provider: !empty(provider) ? provider : 'None'
+    branch: !empty(branch) ? branch : null
+    buildProperties: !empty(buildProperties) ? buildProperties : null
+    repositoryToken: !empty(repositoryToken) ? repositoryToken : null
+    repositoryUrl: !empty(repositoryUrl) ? repositoryUrl : null
+    templateProperties: !empty(templateProperties) ? templateProperties : null 
   }
 }
 

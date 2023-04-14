@@ -9,7 +9,7 @@
             "value": "westeurope"
         },   
         "sku": {
-            "value": "Free"
+            "value": "Standard"
         },
         "repositoryUrl": {
             "value": "https://github.com/patstaples/swatest"
