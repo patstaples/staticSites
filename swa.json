@@ -4,9 +4,6 @@
     "parameters": {
         "name": {
             "value": "my-first-static-web-app"
-        },
-        "location": { 
-            "value": "westeurope"
         },   
         "sku": {
             "value": "Standard"
@@ -18,10 +15,10 @@
             "value": "main"
         },
         "repositoryToken": {
-            "value": "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"
+            "value": "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"
         },
         "enterpriseGradeCdnStatus": {
-            "value": "enabled"
+            "value": "Enabled"
         },
         "buildProperties": {
             "value": {
