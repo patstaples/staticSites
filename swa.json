@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "name": {
-            "value": "swatest"
+            "value": "my-first-static-web-app"
         },
         "location": { 
             "value": "westeurope"
@@ -12,22 +12,23 @@
             "value": "Standard"
         },
         "repositoryUrl": {
-            "value": "https://github.com/patstaples/swatest"
+            "value": "https://github.com/patstaples/my-first-static-web-app"
         },
         "branch": {
             "value": "main"
         },
         "repositoryToken": {
-            "value": "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" 
+            "value": "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"
         },
-        "appLocation": {
-            "value": "/"
+        "enterpriseGradeCdnStatus": {
+            "value": "enabled"
         },
-        "apiLocation": {
-            "value": ""
-        },
-        "appArtifactLocation": {
-            "value": "src"
+        "buildProperties": {
+            "value": {
+                "appLocation": "src",
+                "apiLocation": "",
+                "appArtifactLocation": ""
+            }
         }
     }
 }

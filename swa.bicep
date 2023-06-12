@@ -1,10 +1,8 @@
-// ---------------------------------------------------------
+// =============================================================================
 // Parameters
+
 @description('Required - Name of the static site')
 param name string
-
-@description('Optional - Location of resources')
-param location string = resourceGroup().location
 
 @allowed([
   'Free'
@@ -29,7 +27,7 @@ param stagingEnvironmentPolicy string = 'Enabled'
   'Enabled'
   'Enabling'
 ])
-@description('Optional - Status of enterprise grade CDN serving traffic to app.')
+@description('Optional - Status of enterprise grnewade CDN serving traffic to app.')
 param enterpriseGradeCdnStatus string = 'Disabled'
 
 @description('Optional - Build properties for the static site.')
@@ -51,8 +49,14 @@ param repositoryUrl string = ''
 @description('Optional - The branch name of the GitHub repository.')
 param branch string = ''
 
-// ---------------------------------------------------------
-// Resource
+
+// ============================================================================
+// Variables
+
+var location = 'westeurope'
+
+// ============================================================================
+// Resource setup
 
 resource staticSite 'Microsoft.Web/staticSites@2022-03-01' = {
   name: name
